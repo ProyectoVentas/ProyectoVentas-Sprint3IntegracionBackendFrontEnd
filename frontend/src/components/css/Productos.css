@@ -1,0 +1,19 @@
+
+
+.productos{
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+
+#titlepro{
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+button{
+    border-radius: .25rem;
+}

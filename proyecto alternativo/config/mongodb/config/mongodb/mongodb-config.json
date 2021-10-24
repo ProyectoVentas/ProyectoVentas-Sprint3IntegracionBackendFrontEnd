@@ -1,0 +1,8 @@
+{
+    "mongodb": {
+      "server": "cluster0.ynte1.mongodb.net",
+      "database": "myFirstDatabase?retryWrites=true&w=majority",
+      "user": "andres",
+      "password": "andres"
+    }
+  }
