@@ -9,7 +9,7 @@ import Header from '../Header/Header'
 import Footer from "../Footer/Footer";
 
 
-const Home = ({history}) => {
+const Products = ({history}) => {
   const [error, setError] = useState("");
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
@@ -201,9 +201,9 @@ mostrarModalEditar();
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Categoria</th>
-                <th>Imagen</th>
                 <th></th>
                 <th></th>
+            
                 </tr>
                 <tbody>
               {productData.map((pro ) => (
@@ -211,10 +211,10 @@ mostrarModalEditar();
                   <td>{pro.name}</td>
                   <td>{pro.price}</td>
                   <td>{pro.category}</td>
-                  <td>{pro.imgURL}</td>
-                  <td></td>
+                 
+                  <td><button  className="btn btn-success" onClick={()=>tomarDato(pro._id,pro.name,pro.price,pro.category,pro.imgURL)} >Actualizar</button>  </td>
+
                 <td><button  className="btn btn-danger" onClick={() => deleteProduct(pro._id)} >Delete</button>  </td>
-                <td><button  className="btn btn-success" onClick={()=>tomarDato(pro._id,pro.name,pro.price,pro.category,pro.imgURL)} >Actualizar</button>  </td>
 
                 
                 </tr>
@@ -224,11 +224,11 @@ mostrarModalEditar();
 
           
 <div id="crear" class="modal" >
-
+<form>
   
   <div class="modal-content">
   <div className="form-group">
-  <div><h1>Insertar Producto</h1></div>
+  <div><h1>Crear Producto</h1></div>
   
           <label htmlFor="name">Nombre:</label>
           <br/>
@@ -301,12 +301,12 @@ mostrarModalEditar();
         
 
 <div>
-        <button  className="btn btn-success" onClick={insertarProducto} >crear</button>
+        <button type="submit" className="btn btn-success" onClick={insertarProducto} >crear</button>
 
-         <button className="btn btn-danger"  onClick={cerrarModalInsertar}>cancelar</button>
+         <button type="reset" className="btn btn-danger"  onClick={cerrarModalInsertar}>cancelar</button>
   </div>
   </div>
-
+  </form>
 </div>
 
 <div id="editar" class="modal" >
@@ -419,4 +419,4 @@ mostrarModalEditar();
 
 
 
-export default Home;
+export default Products;

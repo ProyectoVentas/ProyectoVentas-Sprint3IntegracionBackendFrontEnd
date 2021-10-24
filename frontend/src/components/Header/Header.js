@@ -32,12 +32,10 @@ const Header = () => {
                 <li className="nav-item">
                 <Link to="/home">    <a className="nav-link" >Home <span className="sr-only">(current)</span></a></Link>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" >Vendedores</a>
-                </li>
+              
 
                 <li className="nav-item">
-                    <a className="nav-link" > Gestion Ventas</a>
+                   <Link to="/ventas"> <a className="nav-link" > Gestion Ventas</a></Link>
                 </li>
                 <li className="nav-item">
                 <Link to="/user"><a className="nav-link" >Gestion Roles</a></Link>
@@ -50,7 +48,7 @@ const Header = () => {
                
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" >Compras</a>
+                <Link to ="/comprar"><a className="nav-link" >Comprar</a></Link>
                 </li>
                 </ul>
                 <ul class="navbar-nav navbar-right ">

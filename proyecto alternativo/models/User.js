@@ -27,7 +27,7 @@ required:[true, "Please provide a username"]
             
         },
 
-        bDate:Date,
+        bDate:String,
         roles: [
           {
             type: mongoose.Schema.Types.ObjectId,

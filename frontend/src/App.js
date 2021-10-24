@@ -5,7 +5,11 @@ import PrivateRoute from "./components/routing/PrivateRoute";
 import HomeRoute from "./components/routing/HomeRoute";
 import ProductsRoute from "./components/routing/ProductsRoute";
 import UserRoute from "./components/routing/UserRoute";
+import VentasRoute from "./components/routing/VentasRoute";
+
 //pages
+import Comprar from "./components/pages/Comprar";
+import Ventas from "./components/pages/Ventas";
 import User from "./components/pages/User";
 import Products from "./components/pages/Products";
 import Home from "./components/pages/Home";
@@ -20,6 +24,9 @@ const App=()=> {
 
         <div>
 <Switch>
+
+  <VentasRoute exact path="/comprar" component={Comprar}/>
+  <VentasRoute exact path="/ventas" component={Ventas}/>
   <UserRoute exact path="/user" component={User}/>
 <PrivateRoute exact path="/private" component={Private} />
 <HomeRoute path="/home" component={Home} />

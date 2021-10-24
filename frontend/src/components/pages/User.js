@@ -186,8 +186,9 @@ mostrarModalEditar();
                   <td>{pro.phone}</td>
                   <td>{pro.bDate}</td>
                   <td>{pro.roles}</td>
-                <td><button  className="btn btn-danger" onClick={() => deleteUser(pro._id)} >Delete</button>  </td>
                 <td><button  className="btn btn-success" onClick={()=>tomarDato(pro._id,pro.username,pro.email,pro.phone,pro.bDate,pro.roles)} >Actualizar</button>  </td>
+                <td><button  className="btn btn-danger" onClick={() => deleteUser(pro._id)} >Delete</button>  </td>
+
                </tr>
               ))}
             </tbody>
@@ -232,7 +233,9 @@ mostrarModalEditar();
           <br/>
           <div>
           <input
-            type="Date"
+           type="date"  
+
+           min="1900-01-01" max="2050-12-31"
                id="bDate2"
                   onBlur={(e) => setBDate(e.target.value)}
            />
@@ -249,13 +252,15 @@ mostrarModalEditar();
           </form>
           <br/>
         </div>
-       <div>
+        <div>
         <button  className="btn btn-success" onClick={() => actualizarUser(actID)}  > Actualizar</button>
         </div>
+       
         <br></br>
         <div>
   <button className="btn btn-danger"  onClick={cerrarModalEditar}>cancelar</button>
   </div>
+       
   </div>
 </div>
 

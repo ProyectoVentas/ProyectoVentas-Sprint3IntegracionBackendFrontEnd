@@ -165,7 +165,9 @@ const Register = ({ history }) => {
         <div className="form-group">
           <label htmlFor="bDate">Birthday:</label>
           <input
-            type="Date"
+              type="date"  
+
+              min="1900-01-01" max="2050-12-31"
             
             id="bDate"
             placeholder="Enter Birthday"

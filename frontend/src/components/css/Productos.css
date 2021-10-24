@@ -17,3 +17,12 @@
 button{
     border-radius: .25rem;
 }
+
+#separador{
+    height: 13px;
+    border: 30px;
+    width: 75%;
+    border-width:10px;
+    color:#007bff;
+    background-color:#007bff;
+}
