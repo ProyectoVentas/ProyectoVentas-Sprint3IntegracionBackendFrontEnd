@@ -217,12 +217,7 @@ const tomarDato= async(idVen,proFechaCreacion,proEmbalaje,proDespachoRuta,proUbi
   setActVendedor(proVendedor);
   setActCliente(proCliente)
   setActCarrito(proCarrito)
-
-
-
 console.log(idVen)
-
-
 document.getElementById("fechaCreacion2").value=proFechaCreacion
 document.getElementById("embalaje2").value=proEmbalaje
 document.getElementById("despachoRuta2").value=proDespachoRuta
@@ -233,11 +228,6 @@ document.getElementById("medioPago2").value=proMedioPago
 document.getElementById("vendedor2").value=proVendedor
 document.getElementById("cliente2").value=proCliente
 document.getElementById("carrito2").value=proCarrito
-
-
-
-
-
 
 mostrarModalEditar();
 
@@ -507,7 +497,16 @@ setActCarrito(carritoDB);
 />
 
           </div>
-             
+             <br/>
+          <div>
+            <div>
+        <button type="submit" className="btn btn-success" onClick={insertarVenta} >crear</button>
+        </div>
+        <br/>
+        <div>
+         <button type="reset" className="btn btn-danger"  onClick={cerrarModalInsertar}>cancelar</button>
+         </div>
+  </div>
 
           <hr id="separador"></hr>
           
@@ -527,7 +526,7 @@ setActCarrito(carritoDB);
                   <td>{car.name}</td>
                   <td>{car.price}</td>
                   <td>{car.category}</td>
-                  <td>{car.imgURL}</td>
+                  <td><img src={car.imgURL}/></td>
                   <td><button type="button" id="crearProBtn" onClick={()=>agregarCarrito(car._id,car.name,car.price,car.category,car.imgURL)}>Agregar + </button></td>
               
                 {/* <td><button  className="btn btn-success"  >Agregarv al carrito</button>  </td> */}
@@ -543,11 +542,7 @@ setActCarrito(carritoDB);
         </div>
         
 
-<div>
-        <button type="submit" className="btn btn-success" onClick={insertarVenta} >crear</button>
 
-         <button type="reset" className="btn btn-danger"  onClick={cerrarModalInsertar}>cancelar</button>
-  </div>
   </div>
   </form>
 </div>
@@ -694,6 +689,15 @@ min="2018-01-01" max="2050-12-31"
   
 />
           </div>
+          <br/>
+          <div>
+        <button  className="btn btn-success" onClick={() => actualizarVenta(actID)}  >Actualizar</button>
+
+        </div>
+        <br></br>
+        <div>
+  <button className="btn btn-danger"  onClick={cerrarModalEditar}>cancelar</button>
+  </div>
 
           <hr id="separador"></hr>
           
@@ -713,7 +717,7 @@ min="2018-01-01" max="2050-12-31"
                             <td>{car.name}</td>
                             <td>{car.price}</td>
                             <td>{car.category}</td>
-                            <td>{car.imgURL}</td>
+                            <td><img src={car.imgURL}/></td>
                             <td><button type="button" id="crearProBtn" onClick={()=>agregarCarrito2(car._id,car.name,car.price,car.category,car.imgURL)}>Agregar + </button></td>
                         
                           {/* <td><button  className="btn btn-success"  >Agregarv al carrito</button>  </td> */}
@@ -731,14 +735,7 @@ min="2018-01-01" max="2050-12-31"
         </div>
         
 
-<div>
-        <button  className="btn btn-success" onClick={() => actualizarVenta(actID)}  >Actualizar</button>
 
-        </div>
-        <br></br>
-        <div>
-  <button className="btn btn-danger"  onClick={cerrarModalEditar}>cancelar</button>
-  </div>
   </div>
 
 </div>

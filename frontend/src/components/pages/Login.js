@@ -98,6 +98,12 @@ const Login = ({ history }) => {
           Login
         </button>
         </div>
+        <br/>
+        <div>
+        <button id="google" type="submit" className="btn btn-primary">
+          Ingresar con Gmail
+        </button>
+        </div>
 
         <span className="login-screen__subtext">
           Don't have an account? <Link to="/register">Register</Link>

@@ -224,3 +224,13 @@ table{
                font-weight:bolder ;
             
              }
+
+             #login{
+               width:100%;
+             }
+
+             #google{
+              width:100%;
+              background-color: black;
+              border: none;
+            }
